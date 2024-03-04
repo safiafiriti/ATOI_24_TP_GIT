@@ -6,7 +6,7 @@ struct ppm_pixel {
   unsigned char g;//composant vert du pixel
   unsigned char b;//composant bleu du pixel
 };
-//definission des valeurs RGB d'un pixel
+//definition des valeurs RGB d'un pixel
 static inline void ppm_setpixel(struct ppm_pixel *px, unsigned char r,
                                 unsigned char g, unsigned char b) {
   px->r = r;
@@ -24,7 +24,7 @@ int ppm_image_init(struct ppm_image *im, int w, int h);
 //liberer la memoire reservée pour l'image
 int ppm_image_release(struct ppm_image *im);
 
-//definission des coordonnées d'un pixel dans une image
+//definition des coordonnées d'un pixel dans une image
 static inline void ppm_image_setpixel(struct ppm_image *im, int x, int y,
                                       unsigned char r, unsigned char g,
                                       unsigned char b) {
