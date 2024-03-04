@@ -2,6 +2,7 @@
 #define PPM_H
 
 struct ppm_pixel {
+
   unsigned char r; //composant rouge du pixel
   unsigned char g;//composant vert du pixel
   unsigned char b;//composant bleu du pixel
@@ -13,6 +14,7 @@ static inline void ppm_setpixel(struct ppm_pixel *px, unsigned char r,
   px->g = g;
   px->b = b;
 }
+
 //structure dune image en pixel
 struct ppm_image {
   unsigned int width; //la largeur de l'image en pixel
@@ -36,3 +38,4 @@ static inline void ppm_image_setpixel(struct ppm_image *im, int x, int y,
 int ppm_image_dump(struct ppm_image *im, char *path);
 
 #endif /* PPM_H */
+

@@ -1,6 +1,7 @@
 CC=gcc
 CFLAGS=-O3 -g
  
+
 TARGET=test mandel
  
 all: $(TARGET)
@@ -11,8 +12,10 @@ libppm.so : ppm.c
 test: main.c libppm.so
 	$(CC) $(CFLAGS) $(LDFLAGS) main.c  -lppm -L. -o $@
 
-mandel: mandel.c libppm.so
-	$(CC) $(CFLAGS) $(LDFLAGS) $< -lppm -lm -L.  -o $@
+mandel: mandel.c libppm.so  
+	#$(CC) $(CFLAGS) $(LDFLAGS) &< -lppm -lm -L. -o $@
+	$(CC) $(CFLAGS) $(LDFLAGS) mandel.c  -lppm -lm -L. -o $@
+	
  
 
 clean:

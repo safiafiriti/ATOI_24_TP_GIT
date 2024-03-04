@@ -4,7 +4,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-////initialisation de l'image avec les valeurs de sa largeur et hauteur
+
+// initialisation de l'image avec les valeurs de sa largeur et hauteur
 int ppm_image_init(struct ppm_image *im, int w, int h) {
   memset(im, 0, sizeof(struct ppm_image)); //Initialise la structure de l'image à zéro
 
@@ -24,6 +25,7 @@ int ppm_image_init(struct ppm_image *im, int w, int h) {
 }
 
 //Libereation de la memoire reservée pour l'image
+
 int ppm_image_release(struct ppm_image *im) {
   if (im == NULL)
     return 1;
@@ -36,6 +38,7 @@ int ppm_image_release(struct ppm_image *im) {
 
   return 0;
 }
+
 
 //Sauvegarde de l'image PPM dans un fichier
 int ppm_image_dump(struct ppm_image *im, char *path) {
@@ -58,3 +61,4 @@ int ppm_image_dump(struct ppm_image *im, char *path) {
 
   return 0;
 }
+
